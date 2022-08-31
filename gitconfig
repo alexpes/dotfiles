@@ -1,0 +1,5 @@
+[user]
+	name = "Alessandro Pessina"
+
+[core]
+    excludesfile = "~/.gitignore"

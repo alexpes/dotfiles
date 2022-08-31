@@ -1,0 +1,36 @@
+source ~/.vimrc
+
+""" Idea specific settings ------------------
+set ideajoin
+set idearefactormode=keep
+
+" nnoremap [[ :action MethodUp<CR>
+" nnoremap ]] :action MethodDown<CR>
+" nnoremap zc :action CollapseRegion<CR>
+" nnoremap zo :action ExpandRegion<CR>
+" nnoremap ge :action GotoNextError<CR>
+" nnoremap gE :action GotoPreviousError<CR>
+" nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+
+" Distraction-Fr Mode
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Navigation
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+" Actionlist: https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nnoremap <leader>f :action FileStructurePopup<CR>
+nnoremap <leader><space> :action RecentFiles<CR>
+
+nmap <leader>i :action ImplementMethods<CR>
+nmap <leader>o :action OverrideMethods<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+set clipboard+=ideaput
