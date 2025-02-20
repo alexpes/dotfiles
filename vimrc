@@ -23,9 +23,6 @@ set tm=500
 set number relativenumber
 set encoding=utf8 " Set utf8 as standard encoding and en_US as the standard language
 set ffs=unix,dos,mac " Use Unix as the standard file type
-set nobackup " Turn backup off, since most stuff is in SVN, git etc. anyway...
-set nowb " Turn backup off, since most stuff is in SVN, git etc. anyway...
-set noswapfile " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set expandtab " Use spaces instead of tabs
 set smarttab " Be smart when using tabs
 set shiftwidth=4 " 1 tab == 4 spaces
@@ -41,6 +38,10 @@ set omnifunc=syntaxcomplete#Complete
 set termguicolors
 filetype plugin indent on " required
 syntax enable " Enable syntax highlighting
+set ttyfast   " Migliora le prestazioni sui terminali veloci
+set hlsearch  " Evidenzia i risultati della ricerca
+set showcmd   " Mostra comandi incompleti nella barra di stato
+set wildignore+=*.o,*.obj,*.swp,*.pyc,*.class,*.git " Ignora alcuni file nei completamenti
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
