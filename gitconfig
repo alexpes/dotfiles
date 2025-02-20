@@ -1,5 +1,12 @@
 [user]
-	name = "Alessandro Pessina"
+	name = Alessandro Pessina
+	email = alexpes76@gmail.com
+
+[includeIf "gitdir:~/Lavoro/navarca/"]
+    path = ~/dotfiles/gitconfig-navarca
 
 [core]
+    editor = vim
     excludesfile = "~/.gitignore"
+	autocrlf = input
+

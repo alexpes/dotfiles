@@ -1,7 +1,7 @@
 set mouse=a
 set clipboard=unnamed
 set history=500 " Sets how many lines of history VIM has to remember
-set so=7 " Set 7 lines to the cursor - when moving vertically using j/k
+set so=8 " Set 8 lines to the cursor - when moving vertically using j/k
 set wildmenu " Turn on the Wild menu
 set ruler "Always show current position
 set cmdheight=1 " Height of the command bar
@@ -27,7 +27,7 @@ set nobackup " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nowb " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set noswapfile " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set expandtab " Use spaces instead of tabs
-set smarttab " Be smart when using tabs ;)
+set smarttab " Be smart when using tabs
 set shiftwidth=4 " 1 tab == 4 spaces
 set tabstop=4
 set lbr " Linebreak on 500 characters
@@ -39,8 +39,8 @@ set laststatus=2 " Always show the status line
 set nocompatible " be iMproved, required
 set omnifunc=syntaxcomplete#Complete
 set termguicolors
-syntax enable " Enable syntax highlighting
 filetype plugin indent on " required
+syntax enable " Enable syntax highlighting
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
@@ -55,7 +55,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'terryma/vim-multiple-cursors'
+"    Plug 'terryma/vim-multiple-cursors'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim' 
     Plug 'junegunn/vim-peekaboo'
@@ -128,15 +128,15 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " @ terryma/vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = '<C-g>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = 'g<C-g>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-g>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+"let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_start_word_key      = '<C-g>'
+"let g:multi_cursor_select_all_word_key = '<A-n>'
+"let g:multi_cursor_start_key           = 'g<C-g>'
+"let g:multi_cursor_select_all_key      = 'g<A-n>'
+"let g:multi_cursor_next_key            = '<C-g>'
+"let g:multi_cursor_prev_key            = '<C-p>'
+"let g:multi_cursor_skip_key            = '<C-x>'
+"let g:multi_cursor_quit_key            = '<Esc>'
 
 " junegunn/fzf 
 nnoremap <leader><leader> :Files<CR>

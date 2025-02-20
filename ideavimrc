@@ -15,8 +15,10 @@ set idearefactormode=keep
 " Distraction-Fr Mode
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
+vnoremap <c-g> :action SelectNextOccurrence<CR>
+
 " Navigation
-nnoremap <c-\> :action SplitVertically<CR>
+" nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>

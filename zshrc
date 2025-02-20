@@ -117,23 +117,20 @@ bindkey '^[[B' history-substring-search-down
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias ds="docker stop \$(docker ps -aq)"
-alias ll='ls -ahlG'
+alias ls='eza -l'
+alias ll='eza -ahl'
 alias flushdns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
+alias php74='/opt/homebrew/Cellar/php@7.4/7.4.33_1/bin/php'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="/usr/local/sbin:$PATH"
-
-# Configurazione per sviluppo APP per Android
-# export ANDROID_SDK=~/Library/Android/sdk
-# export ANDROID_SDK_ROOT=${ANDROID_HOME}/tools # Forse questa variabile serve a JAVA in qualche modo...
-# export ANDROID_SDK_TOOLS=${ANDROID_HOME}/tools
-# export ANDROID_SDK_EMULATOR=${ANDROID_SDK}/emulator
-# export ANDROID_SDK_PLATFORM_TOOLS=${ANDROID_SDK}/platform-tools
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home
-# export PATH=$ANDROID_HOME:$ANDROID_SDK_EMULATOR:$ANDROID_SDK_PLATFORM_TOOLS:$ANDROID_SDK_TOOLS:$PATH
-# export PATH=$PATH:${JAVA_HOME}/bin
+export PATH="/opt/homebrew/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.tmux_aliases.zsh ] && source ~/.tmux_aliases.zsh 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
